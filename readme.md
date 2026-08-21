@@ -44,3 +44,110 @@ Evaluate answers
 Track score
         ↓
 Display final accuracy
+```
+
+## Version 1.1
+
+Version 1.1 adds question-type selection and filtering to the core training engine.
+
+### New in Version 1.1
+
+- Automatically identifies the question types available within the selected channel
+- Presents available question types for user selection
+- Filters the question bank by both selected channel and selected question type
+- Keeps question types data-driven through the JSON question bank rather than hard-coding them into the Python application
+- Added code documentation to clarify the application's data flow and Python implementation
+
+### Updated Workflow
+
+```text
+Select channel
+      ↓
+Filter questions by channel
+      ↓
+Identify available question types
+      ↓
+Select question type
+      ↓
+Filter questions by type
+      ↓
+Select session size
+      ↓
+Randomly generate session
+      ↓
+Evaluate answers
+      ↓
+Calculate score and accuracy
+```
+
+This establishes the foundation for future controlled question sessions in which different engineering question formats can be intentionally combined or weighted.
+
+## Project Structure
+
+```text
+engineering_trainer_flashcards/
+├── engineering_trainer.py
+├── config.json
+├── questions.json
+└── readme.md
+```
+
+### `engineering_trainer.py`
+
+Contains the application logic, including:
+
+- Configuration loading
+- Question-bank loading
+- Category selection
+- Question filtering
+- Random session generation
+- Answer evaluation
+- Score tracking
+
+### `config.json`
+
+Contains application-level configuration such as:
+
+- Application name
+- Available training categories
+
+Keeping these values outside the Python program allows the application structure to be modified without changing the core code.
+
+### `questions.json`
+
+Contains the training question bank and answer keys.
+
+Questions are stored as structured data so that new questions and categories can be added independently of the application logic.
+
+## Initial Training Categories
+
+The application is being developed to support engineering knowledge across areas including:
+
+- Electrical Engineering
+- Psychoacoustics
+- Acoustics
+- Electroacoustics
+- DSP
+- Automotive Audio
+
+The question bank will expand as additional engineering study material is developed.
+
+## Design Goal
+
+The long-term goal is to develop the application into a flexible engineering training system capable of supporting different question formats, controlled question distributions, performance tracking, and increasingly adaptive practice sessions.
+
+Version 1 intentionally focuses on establishing the underlying question-session architecture before adding those more advanced capabilities.
+
+## Development Approach
+
+This project is being developed incrementally through working software milestones.
+
+Each feature is implemented and tested locally before being incorporated into the repository. The project is also being used as a practical exercise in Python programming, software structure, JSON data handling, Git, and GitHub-based development.
+
+## Status
+
+**Version 1.1 — Core question-session engine with question-type selection implemented**
+
+Current version is a functional command-line application with an initial question bank.
+
+Future development will expand the question model, training formats, session selection logic, performance tracking, and user interface.
