@@ -82,6 +82,24 @@ Calculate score and accuracy
 
 This establishes the foundation for future controlled question sessions in which different engineering question formats can be intentionally combined or weighted.
 
+## Development Roadmap
+
+The following is an initial development plan for the application. Version boundaries are provisional and may change as the system develops.
+
+| Version | Planned Development |
+|---|---|
+| **1.0** | Basic question/session engine, category selection, randomized sessions, answer evaluation, and scoring |
+| **1.1** | Question-type discovery, selection, and filtering |
+| **1.2** | Multiple question formats beyond the initial multiple-choice implementation |
+| **1.3** | Controlled session composition and configurable mixes of question types |
+| **1.4** | Per-question/card performance states and learning progress data |
+| **1.5** | Review and repetition logic for previously missed or developing material |
+| **1.6** | Initial graphical user interface and performance/session controls |
+| **1.7** | Weak-topic targeting and more intelligent session selection |
+| **2.0** | Adaptive training engine combining question selection, performance history, review logic, and user progress |
+
+The roadmap is intentionally incremental. The goal is to establish and test the underlying training engine before building the full user interface and adaptive system.
+
 ## Project Structure
 
 ```text
