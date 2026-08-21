@@ -1,0 +1,16 @@
+[
+    {
+        "question": "A tweeter measures flat on-axis but rolls off substantially at the driver's seat. Re-aiming the tweeter improves the response. What is the most likely explanation?",
+        "choices": {
+            "A": "Polarity reversal",
+            "B": "Directivity / off-axis behavior",
+            "C": "Cabin modal behavior",
+            "D": "Impedance"
+        },
+        "correct_answer": "B",
+        "category" : "Automotive Tuning",
+        "channel": "Automotive Tuning",
+        "type": "Scenario",
+        "topic": "Directivity"
+    }
+]
